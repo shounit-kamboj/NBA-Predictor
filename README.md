@@ -1,4 +1,4 @@
-# NBA Game Outcome Predictor (2019–2025)
+# NBA Game and season Outcome Predictor 
 
 ## Overview
 An end-to-end **NBA game outcome prediction system** built to demonstrate practical skills in data engineering, feature design, and machine learning. The project scrapes and processes real NBA game data, engineers time-aware features, and trains a supervised model to predict game outcomes on future data. Results are aggregated to produce **projected team win totals** by conference.
@@ -8,22 +8,10 @@ This project emphasizes **clean data pipelines, avoidance of data leakage, and e
 ---
 
 ## What This Project Demonstrates
+- Training and evaluating ML models 
 - Building a **real-world data pipeline** from raw data to model output  
-- Time-aware **feature engineering using rolling statistics**  
-- Training and evaluating ML models on **future test sets**  
-- Debugging subtle issues caused by notebook state and aggregation logic  
+- Time-aware **feature engineering using rolling statistics**   
 - Producing interpretable, team-level outputs from per-game predictions  
-
----
-
-## Project Structure
-```
-├── scraping_data.ipynb    # Collects raw NBA game data
-├── parse_data.ipynb       # Cleans, merges, and validates datasets
-├── nba-model.ipynb        # Feature engineering, modeling, and evaluation
-├── nba_games_2019to2025.csv
-└── README.md
-```
 
 ---
 
@@ -64,10 +52,10 @@ RandomForestClassifier(
 ## Results
 The model was evaluated on **unseen future games** from the 2024–2025 season window.
 
-**Performance (game-level):**
-- **Accuracy**: ~53%
-- **Precision**: ~53%
-- Performance exceeds a naïve random baseline and demonstrates the value of contextual and rolling features.
+**Performance:**
+- **Accuracy**: ~62%
+- **Precision**: ~62%
+
 
 **Observations:**
 - Rolling averages significantly improved stability over raw per-game stats.
@@ -77,7 +65,6 @@ The model was evaluated on **unseen future games** from the 2024–2025 season w
 **Standings Projection:**
 - Per-game predictions were summed to estimate **projected team win totals**.
 - Standings were generated separately for **Eastern** and **Western Conferences**.
-- All 30 teams are retained, including teams with zero predicted wins, to avoid aggregation bias.
 
 ---
 
@@ -98,19 +85,9 @@ The model was evaluated on **unseen future games** from the 2024–2025 season w
 
 ## Technologies Used
 - **Python**
-- **pandas**, **NumPy**
+- **pandas**
 - **scikit-learn**
 - **Jupyter Notebook**
 
 ---
 
-## Future Improvements
-- Calibrated probability predictions using `predict_proba`
-- Advanced team metrics (ELO, net rating)
-- Player- or lineup-level features
-- Comparison against betting market baselines
-- Model calibration and uncertainty analysis
-
----
-
-*Built as a portfolio project to demonstrate applied machine learning and data engineering skills for internship and entry-level roles.*
