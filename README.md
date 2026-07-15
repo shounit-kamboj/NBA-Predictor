@@ -55,6 +55,12 @@ The model was evaluated on **unseen future games** from the 2024–2025 season w
 **Performance:**
 - **Accuracy**: ~62%
 - **Precision**: ~62%
+ <img width="336" height="606" alt="Screenshot 2026-07-15 at 2 53 32 AM" src="https://github.com/user-attachments/assets/b56bf77e-80c2-42aa-b871-c273e63d7dfc" />
+ <img width="749" height="695" alt="Screenshot 2026-07-15 at 2 54 42 AM" src="https://github.com/user-attachments/assets/6137da14-c2e7-48fc-9b58-476a26131363" />
+ <img width="743" height="700" alt="Screenshot 2026-07-15 at 2 54 58 AM" src="https://github.com/user-attachments/assets/9eaaabf2-c10c-43e1-aa9b-be92dcee0bce" />
+
+
+ 
 
 
 **Observations:**
